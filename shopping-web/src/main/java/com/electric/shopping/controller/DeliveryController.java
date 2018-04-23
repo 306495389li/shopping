@@ -38,6 +38,7 @@ public class DeliveryController {
         JSONObject js = new JSONObject();
         try {
             String result = KdniaoTrackQueryAPI.getOrderTracesByJson(No);
+            System.out.printf(result);
             JSONObject json = JSONObject.parseObject(result);
             if("true".equals(json.getString("Success"))){
                 js.put("code",200);
